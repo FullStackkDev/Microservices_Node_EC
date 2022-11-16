@@ -1,8 +1,8 @@
-import express from "express";
+const express = require("express");
 const router = express.Router();
 
-import { getInventory } from "../controllers/inventory.controllers.js";
+const { getInventory } = require("../controllers/inventory.controllers");
 
 router.get("/", getInventory);
 
-export default router;
+module.exports = router;

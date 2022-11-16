@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const InventorySchema = mongoose.Schema({
   name: {
@@ -15,4 +15,4 @@ const InventorySchema = mongoose.Schema({
 });
 
 const InventoryModel = mongoose.model("inventories", InventorySchema);
-export default InventoryModel;
+module.exports = InventoryModel;

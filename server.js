@@ -1,12 +1,12 @@
-import express from "express";
-import dotenv from "dotenv";
-import cors from "cors";
+const express = require("express");
+const dotenv = require("dotenv");
+const cors = require("cors");
 dotenv.config();
-const app = express();
-import { connectDB } from "./db/index.js";
-import InventoryRouter from "./routes/inventory.routes.js";
+const { connectDB } = require("./db");
+const InventoryRouter = require("./routes/inventory.routes");
 
 const PORT = process.env.PORT || 8000;
+const app = express();
 
 app.use(express.json());
 app.use(cors());
@@ -21,4 +21,4 @@ app.use("/inventory", InventoryRouter);
 
 app.listen(PORT, console.log(`server running on port ${PORT}`));
 
-export default app;
+module.exports = app;

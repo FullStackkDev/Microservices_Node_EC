@@ -1,4 +1,4 @@
-import Inventory from "../models/inventory.models.js";
+const Inventory = require("../models/inventory.models");
 
 const getInventory = async (req, res) => {
   try {
@@ -15,4 +15,4 @@ const getInventory = async (req, res) => {
   }
 };
 
-export { getInventory };
+module.exports = { getInventory };
