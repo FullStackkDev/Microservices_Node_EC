@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "test": "jest --force-exit"
+    "test": "jest --force-exit",
+    "seed": "node seeder.js"
   },
   "keywords": [],
   "author": "",
