@@ -12,6 +12,14 @@ const InventorySchema = mongoose.Schema({
   description: {
     type: String,
   },
+  imageUrl: {
+    type: String,
+    required: true,  
+  },
+  category: {
+    type: String,
+    required: true,
+  }
 });
 
 const InventoryModel = mongoose.model("inventories", InventorySchema);
